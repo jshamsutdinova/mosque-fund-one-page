@@ -42,6 +42,10 @@ export const SocialLogo = styled(Link) `
     align-items: center;
     margin-bottom: 16px;
     font-weight: bold;
+
+    @media screen and (max-width: 768px) {
+        font-size: 1rem;
+    }
 `
 
 export const WebsiteRights = styled.small `

@@ -14,9 +14,9 @@ const Footer = () => {
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to='/' onClick={toggleHome}>
-              Мечеть города Свирска
+            © {new Date().getFullYear()} Мечеть города Свирска 
             </SocialLogo>
-            <WebsiteRights>Мечеть города Свирска © {new Date().getFullYear()}</WebsiteRights>
+            {/* <WebsiteRights> 8-914-922-46-97 </WebsiteRights> */}
           </SocialMediaWrap>
         </SocialMedia>
       </FooterWrap>
