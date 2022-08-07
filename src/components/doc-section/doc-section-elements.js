@@ -5,48 +5,46 @@ export const DocContainer = styled.div `
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 0.5fr 0.3fr; 
+    grid-template-rows: 0.5fr 0.5fr 0.5fr; 
     gap: 0px 0px;
     grid-template-areas:
-        "info info card-details"
-        "docs docs card-details"
-        "docs docs card-details";
+        "message message docs"
+        "card-details card-details info"
+        "card-details card-details info";
 
     margin: 20px 35px;
 
     @media screen and (max-width: 768px) {
         padding: 10px 0;
         grid-template-areas:
-        "info info info"
+        "message message message"
+        "card-details card-details card-details"
         "docs docs docs"
-        "card-details card-details card-details";
+        "info info info";
         margin: 10px 15px;
-
     }   
 `
 
 
+export const Message = styled.div `
+    grid-area: message;
+`
+
 export const Info = styled.div `
     grid-area: info;
-
-    @media screen and (max-width:768px) {
-        padding-top: 80px;
-    }
+    margin-left: 20px;
 `
 
 export const CardDetails = styled.div `
     grid-area: card-details;
-
-    @media screen and (max-width:768px) {
-        padding-top: 80px;
-    }
 `
 
 export const Docs = styled.div `
     grid-area: docs;
-
+    margin-left: 20px;
+    
     @media screen and (max-width:768px) {
-        padding-top: 80px;
+        margin: 15px;
     }
 `
 
@@ -66,7 +64,7 @@ export const TopLine = styled.h1`
 
 export const Heading = styled.p `
     margin-bottom: 10px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.1;
     font-weight: 600;
     color: #01bf71;
@@ -76,7 +74,7 @@ export const Heading = styled.p `
 `
 
 export const Subtitle = styled.span`
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #010606;
     text-transform: uppercase;
 `
@@ -106,7 +104,7 @@ export const QR =styled.img `
 `
 
 export const DocLink = styled.div `
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     text-decoration: none;
     transition: 0.2s ease-in-out;
     cursor: pointer;
@@ -126,4 +124,33 @@ export const DocLink = styled.div `
     @media screen and (max-width:768px) {
         font-size: 1.8rem;
     }
+`
+
+export const TextHighlight = styled.p `
+    font-size: 1.7rem;
+    line-height: 1.1;
+    font-weight: 600;
+    /* color: #01bf71; */
+    background-color: #b1f8c1;
+    padding: 15px;
+`
+
+export const InfoHeading = styled.p `
+    margin-top: 10px;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    font-weight: 600;
+    color: #01bf71;
+    @media screen and (max-width: 480px) {
+        font-size: 32px;
+    }
+`
+
+export const InfoText = styled.p `
+    font-size: 1.2rem;
+    color: #010606;
+`
+
+export const Phone = styled.span `
+    font-weight: 600;
 `

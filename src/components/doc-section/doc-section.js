@@ -1,44 +1,62 @@
 import React from 'react'
-import { DocContainer, Info, CardDetails, Docs,
-         TopLine, Heading, Subtitle, Text, QR, ImgContainer, DocLink  } from './doc-section-elements'
+import { DocContainer, Info, Message, CardDetails, Docs,
+         TopLine, Heading, Subtitle, Text, DocLink, TextHighlight, InfoHeading, InfoText, Phone } from './doc-section-elements'
 import Img from '../../images/qr.png'
 
+const openFile = (url) => {
+  window.open(url, '_blank');
+  console.log('here')
+}
 
 const DocSection = () => {
   return (
     <>
       <DocContainer>
-          <Info  id='documents'>
-            <Text>Объявляется сбор средств для строительства Свирской мечети.</Text>
-            <Text>Чтобы открыть мечеть для посещения, осталось облагородить территорию вокруг нее, а также построить отдельное помещение для омовения — тахаратхана.
-            Это уникальная возможность для участников сбора получать непрерывное вознаграждение от Аллаха!</Text>
-            <Text>Мы надеемся на милость Всевышнего, чтобы каждая капля воды, которую будет брать молящийся при омовении, принесет награду тем, кто пожертвовал.</Text>
-             <Text>Этот вид милостыни способен увеличить награду пред Всевышним даже после того, как человек уйдет из жизни, до тех пор, пока мусульмане пользуются 
-             тахаратханой. Кроме этого, поддержка омских братьев и сестер в открытии дома Аллаха сплачивает умму. </Text> 
-             <Text>Пусть Омская мечеть станет местом, где каждый исповедующий Ислам найдет покой души, источник знаний и праведное окружение!</Text>
-          </Info>
+          <Message  id='documents'>
+            <Text>Проводится сбор средств на строительство мечети в г. Свирске Иркутской области.</Text>
+
+            <Text>
+            В июле 2021 года в г. Свирске по инициативе местных мусульман различных национальностей проведено учредительное собрание и создана местная религиозная организация «Мусульманская община города Свирск». В мае 2022 года организация была зарегистрирована в Министерстве юстиции Российской Федерации и получила статус юридического лица.
+            </Text>
+            <Text>
+            Одной из главных задач организации с целью сплочения мусульман города и создания условий для развития обычаев и традиций является строительство мечети. Администрация в лице Мэра города с пониманием отнеслась к данному мероприятию,  выделив земельный участок в центре населенного пункта. Поэтому будущая мечеть должна быть достойной и стать украшением города.
+            </Text>
+            <Text>Сбор пожертвований на строительство и садака на развитие организации можно перечислить по реквизитам: </Text>
+          </Message>
           <CardDetails id="payInfo">
-          <TopLine>реквизиты</TopLine>
-                <Heading>Получатель: <Subtitle>ШАМСУТДИНОВ НАСИМ ГУСАМОВИЧ</Subtitle></Heading>
-                <Heading>Номер счета: <Subtitle>40817810618351182409</Subtitle></Heading>
+          <TopLine>МЕСТНАЯ РЕЛИГИОЗНАЯ ОРГАНИЗАЦИЯ "МУСУЛЬМАНСКАЯ ОБЩИНА ГОРОДА СВИРСК" ИРКУТСКОЙ ОБЛАСТИ</TopLine>
+                <Heading>Расчетный счет: <Subtitle>40703810718350002361</Subtitle></Heading>
                 <Heading>Банк получателя: <Subtitle>БАЙКАЛЬСКИЙ БАНК ПАО СБЕРБАНК</Subtitle></Heading>
-                <Heading>БИК: <Subtitle>042520607</Subtitle></Heading>
-                <Heading>Корр.счет: <Subtitle>30101810900000607</Subtitle></Heading>
-                <Heading>ИНН: <Subtitle>042520607</Subtitle></Heading>
-                <Heading>КПП: <Subtitle>381243001</Subtitle></Heading>
-                <Heading>SWIFT-код: <Subtitle>Sabrrumm</Subtitle></Heading>
-                <ImgContainer>
-                  <QR src={Img} alt="qr"></QR>
-                </ImgContainer>
+                <Heading>БИК: <Subtitle>01252607</Subtitle></Heading>
+                <Heading>Корр.счет: <Subtitle>30101810900000000607</Subtitle></Heading>
+
+                <TextHighlight>Возможно внесение средств на карту СБЕРБАНКА: <br/> 5469 1800 1372 2338 получатель Халифаев Сафар Раджабович</TextHighlight>
           </CardDetails>
           <Docs id='plan'>
-              <DocLink>инн</DocLink>
-              <DocLink>Лицензия</DocLink>
+              <DocLink onClick={()=>openFile('https://drive.google.com/file/d/1NBFXwKTf9JyyJCwa46w8ZTE7B0V-Lejc/view?usp=sharing')}>Учредительные документы</DocLink>
               <DocLink>Схема мечети</DocLink>
-              <DocLink>Договор на землю</DocLink>
-              <DocLink>Разрешение на строительство</DocLink>
-              
+              <DocLink onClick={()=>openFile('https://drive.google.com/file/d/1Z8tfRezFuYt7o1dVUSQfXvh_Xl0RqaY_/view?usp=sharing')}>Договор на землю</DocLink>
+              <DocLink onClick={()=>openFile('https://drive.google.com/file/d/1gn_47HzD8kVFF0hnwntBxsuiHlfD_xpq/view?usp=sharing')}>Карточка организации</DocLink>
+              {/* <DocLink>Разрешение на строительство</DocLink> */}
           </Docs>
+          <Info>
+          <InfoHeading>Юридический адрес:</InfoHeading>
+          <InfoText>665420, Иркутская область, г.Свирск, ул. Ленина, стр. 4Д</InfoText>
+
+          <InfoHeading>Почтовый адрес:</InfoHeading>
+          <InfoText>665420, Иркутская область, г.Свирск, пер. О.Кошевого, дом 13, кв. 83</InfoText>
+
+          <InfoHeading>Председатель организации:</InfoHeading>
+          <InfoText>Шамсутдинов Насим Гусамович</InfoText>
+          <InfoText> Телефон: <Phone>+7 (914) 922-46-97</Phone> </InfoText>
+          <InfoText>Почта: <Phone>nash677@yandex.ru</Phone></InfoText>
+          
+          <InfoHeading>Имам организации:</InfoHeading>
+          <InfoText>Халифаев Сафар Раджабович</InfoText>
+          <InfoText>Телефон: <Phone>+7 (995) 092-48-89</Phone></InfoText>
+          
+
+          </Info>
       </DocContainer>
     </>
   )
