@@ -45,10 +45,11 @@ export const NavLogo = styled(LinkRouter)`
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
-    font-family: 'DS Arabic', arial;
+    /* font-family: 'DS Arabic',arial; */
 
     @media screen and (max-width: 768px) {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        margin-left: 0px;
     }
     
 `
@@ -64,7 +65,7 @@ export const MobileIcon = styled.div`
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: #fff;       
+        color: #fff;
     }
 `
 

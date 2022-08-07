@@ -28,7 +28,7 @@ const Navbar = ({ toggle }) => {
     <IconContext.Provider value={{ color: '#fff'}}>
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo to='./' onClick={toggleHome}>Мечеть города Свирска</NavLogo>
+          <NavLogo to='./' onClick={toggleHome}>Сайт мусульман города Свирска Иркутской области</NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
