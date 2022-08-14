@@ -8,7 +8,11 @@ export const StartContainer = styled.div `
     padding: 0 30px;
     height: 860px;
     position: relative;
-    z-index: 1;   
+    z-index: 1;
+
+    @media screen and (min-width: 1900px) {
+        height: 1000px;
+    }
 
     // Add :before styles
 `

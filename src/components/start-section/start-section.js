@@ -9,7 +9,7 @@ const StartSection = () => {
             <ImgBg src={Img} alt='Мечеть' />
         </StartBg>
         <StartContent>
-            <StartH1>СБОР СРЕДСТВ НА СТРОИТЕЛЬТСВО СВИРСКОЙ МЕЧЕТИ</StartH1>
+            <StartH1>СБОР СРЕДСТВ НА СТРОИТЕЛЬСТВО СВИРСКОЙ МЕЧЕТИ</StartH1>
         </StartContent>
     </StartContainer>
   )
