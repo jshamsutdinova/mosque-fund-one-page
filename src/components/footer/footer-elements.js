@@ -12,7 +12,7 @@ export const FooterWrap = styled.div `
     justify-content: center;
     align-items: center;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 0 30px;
 `
 
 export const SocialMedia = styled.section `
@@ -37,7 +37,7 @@ export const SocialLogo = styled(Link) `
     justify-self: start;
     cursor: pointer;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     margin-bottom: 16px;
