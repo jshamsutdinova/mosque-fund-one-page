@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-export const DocContainer = styled.div `
-    background: #f9f9f9;
+const greenColor = '#01bf71';
 
+
+export const DocContainer = styled.div `
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 0.5fr 0.5fr; 
@@ -22,12 +23,20 @@ export const DocContainer = styled.div `
         "docs docs docs"
         "info info info";
         margin: 10px 15px;
-    }   
-`
+    }
 
+    @media screen and (min-width: 1900px) {
+        margin: 20px 235px;
+    }
+
+`
 
 export const Message = styled.div `
     grid-area: message;
+    
+    @media screen and (min-width: 768px) {
+        padding-right: 50px;
+    }
 `
 
 export const Info = styled.div `
@@ -37,6 +46,9 @@ export const Info = styled.div `
 
 export const CardDetails = styled.div `
     grid-area: card-details;
+    @media screen and (min-width: 768px) {
+        padding-right: 20px;
+    }    
 `
 
 export const Docs = styled.div `
@@ -67,7 +79,7 @@ export const Heading = styled.p `
     font-size: 1.5rem;
     line-height: 1.1;
     font-weight: 600;
-    color: #01bf71;
+    color: ${greenColor};
     @media screen and (max-width: 480px) {
         font-size: 32px;
     }
@@ -84,6 +96,11 @@ export const Text = styled.p`
     font-size: 18px;
     line-height: 30px;
     color: '#010606';
+    text-align: justify;
+
+    @media screen and (min-width: 1900px) {
+        font-size: 24px;
+    }
 `
 
 export const ImgContainer = styled.div`
@@ -109,8 +126,7 @@ export const DocLink = styled.div `
     transition: 0.2s ease-in-out;
     cursor: pointer;
 
-    color: #01bf71;
-    /* line-height: 20px; */
+    color: ${greenColor};
     font-weight: 700;
     letter-spacing: 1.4px;
     text-transform: uppercase;
@@ -130,7 +146,6 @@ export const TextHighlight = styled.p `
     font-size: 1.7rem;
     line-height: 1.1;
     font-weight: 600;
-    /* color: #01bf71; */
     background-color: #b1f8c1;
     padding: 15px;
 `
@@ -140,7 +155,7 @@ export const InfoHeading = styled.p `
     font-size: 1.5rem;
     line-height: 1.1;
     font-weight: 600;
-    color: #01bf71;
+    color: ${greenColor};
     @media screen and (max-width: 480px) {
         font-size: 32px;
     }

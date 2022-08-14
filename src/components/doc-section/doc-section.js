@@ -1,7 +1,6 @@
 import React from 'react'
 import { DocContainer, Info, Message, CardDetails, Docs,
          TopLine, Heading, Subtitle, Text, DocLink, TextHighlight, InfoHeading, InfoText, Phone } from './doc-section-elements'
-import Img from '../../images/qr.png'
 
 const openFile = (url) => {
   window.open(url, '_blank');
@@ -19,7 +18,10 @@ const DocSection = () => {
             В июле 2021 года в г. Свирске по инициативе местных мусульман различных национальностей проведено учредительное собрание и создана местная религиозная организация «Мусульманская община города Свирск». В мае 2022 года организация была зарегистрирована в Министерстве юстиции Российской Федерации и получила статус юридического лица.
             </Text>
             <Text>
-            Одной из главных задач организации с целью сплочения мусульман города и создания условий для развития обычаев и традиций является строительство мечети. Администрация в лице Мэра города с пониманием отнеслась к данному мероприятию,  выделив земельный участок в центре населенного пункта. Поэтому будущая мечеть должна быть достойной и стать украшением города.
+            Одной из главных задач организации с целью сплочения мусульман города и создания условий для развития обычаев и традиций Ислама является строительство мечети.
+            </Text>
+            <Text>
+            Администрация города в лице Мэра с пониманием отнеслась к данному мероприятию, выделив земельный участок в центре населенного пункта. Поэтому будущая мечеть должна быть достойной и стать украшением города.
             </Text>
             <Text>Сбор пожертвований на строительство и садака на развитие организации можно перечислить по реквизитам: </Text>
           </Message>
@@ -34,7 +36,7 @@ const DocSection = () => {
           </CardDetails>
           <Docs id='plan'>
               <DocLink onClick={()=>openFile('https://drive.google.com/file/d/1NBFXwKTf9JyyJCwa46w8ZTE7B0V-Lejc/view?usp=sharing')}>Учредительные документы</DocLink>
-              <DocLink>Схема мечети</DocLink>
+              <DocLink>План мечети <Heading>(в разработке)</Heading></DocLink>
               <DocLink onClick={()=>openFile('https://drive.google.com/file/d/1Z8tfRezFuYt7o1dVUSQfXvh_Xl0RqaY_/view?usp=sharing')}>Договор на землю</DocLink>
               <DocLink onClick={()=>openFile('https://drive.google.com/file/d/1gn_47HzD8kVFF0hnwntBxsuiHlfD_xpq/view?usp=sharing')}>Карточка организации</DocLink>
               {/* <DocLink>Разрешение на строительство</DocLink> */}
