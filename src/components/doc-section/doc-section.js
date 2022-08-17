@@ -36,7 +36,7 @@ const DocSection = () => {
           </CardDetails>
           <Docs id='plan'>
               <DocLink onClick={()=>openFile('https://drive.google.com/file/d/1NBFXwKTf9JyyJCwa46w8ZTE7B0V-Lejc/view?usp=sharing')}>Учредительные документы</DocLink>
-              <DocLink>План мечети <Heading>(в разработке)</Heading></DocLink>
+              <DocLink onClick={()=>openFile('https://drive.google.com/file/d/1eh33WK2hljVXkJtRXvexeCdy2GCMAD6V/view?usp=sharing')}>План мечети</DocLink>
               <DocLink onClick={()=>openFile('https://drive.google.com/file/d/1Z8tfRezFuYt7o1dVUSQfXvh_Xl0RqaY_/view?usp=sharing')}>Договор на землю</DocLink>
               <DocLink onClick={()=>openFile('https://drive.google.com/file/d/1gn_47HzD8kVFF0hnwntBxsuiHlfD_xpq/view?usp=sharing')}>Карточка организации</DocLink>
               {/* <DocLink>Разрешение на строительство</DocLink> */}
